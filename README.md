@@ -8,7 +8,8 @@
 # Demo
 
 ```
-[click!](https://css-animation-4cd4d.web.app)  
+.[click!](https://css-animation-4cd4d.web.app)  
+
 ```
 
 
