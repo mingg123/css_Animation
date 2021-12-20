@@ -7,11 +7,9 @@
 
 # Demo
 
-```
-[click!](https://css-animation-4cd4d.web.app, "google link")
+[click!](https://css-animation-4cd4d.web.app)
 
 
-```
 
 
 
