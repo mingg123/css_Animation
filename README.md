@@ -7,7 +7,7 @@
 
 # Demo
 
-[click!](https://css-animation-4cd4d.web.app)
+[click here!](https://css-animation-4cd4d.web.app)
 
 
 
