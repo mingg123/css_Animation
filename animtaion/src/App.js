@@ -4,6 +4,7 @@ import cloud1Img from "./image/cloud1.png";
 import cloud2Img from "./image/cloud2.png";
 import cloud3Img from "./image/cloud3.png";
 import { useEffect } from "react";
+
 function App() {
   useEffect(() => {
     {
