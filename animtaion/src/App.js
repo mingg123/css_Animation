@@ -14,8 +14,10 @@ import {
   Redirect,
 } from "react-router-dom";
 import { Link } from "react-router-dom";
+import LoadingComponent from "./components/LoadingComponent";
 
 function App() {
+  const animations = ["forest", "colorfulrain", "loading"];
   return (
     <BrowserRouter>
       <div className="App">
@@ -23,17 +25,28 @@ function App() {
         <li className="list">
           <Link to="/">Home </Link>
         </li>
-        <li className="list">
+        {animations.map((elem, index) => {
+          return (
+            <li className="list">
+              <Link to={"/" + elem}> {elem}</Link>
+            </li>
+          );
+        })}
+        {/* <li className="list">
           <Link to="/forest">Forest </Link>
         </li>
         <li className="list">
           <Link to="/colorfulrain">ColorFul Rain </Link>
         </li>
+        <li className="list">
+          <Link to="/loading">loading</Link>
+        </li> */}
         <Switch>
           <Route exact path="/" component={ForestComponent} />
           <Route path="/forest" component={ForestComponent} />
           <Route path="/colorfulrain" component={ColorfulRainComponent} />
-          {/* <Redirect to={ColorfulRainComponent} /> */}
+          <Route path="/loading" component={LoadingComponent} />
+          <Redirect to={ColorfulRainComponent} />
         </Switch>
       </div>
     </BrowserRouter>

@@ -2,7 +2,6 @@ import "./ColorfulRain.css";
 import { useEffect } from "react";
 
 const ColorfulRainComponent = () => {
-  console.log("rain");
   useEffect(() => {
     rain();
   }, []);
