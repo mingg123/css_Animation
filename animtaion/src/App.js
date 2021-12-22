@@ -5,6 +5,7 @@ import cloud2Img from "./image/cloud2.png";
 import cloud3Img from "./image/cloud3.png";
 import { useEffect } from "react";
 import ForestComponent from "./components/ForestComponent";
+import ColorfulRainComponent from "./components/ColorfulRainComponent";
 import {
   BrowserRouter,
   Route,
@@ -25,10 +26,14 @@ function App() {
         <li className="list">
           <Link to="/forest">Forest </Link>
         </li>
+        <li className="list">
+          <Link to="/colorfulrain">ColorFul Rain </Link>
+        </li>
         <Switch>
-          <Route path="/" component={ForestComponent} />
+          <Route exact path="/" component={ForestComponent} />
           <Route path="/forest" component={ForestComponent} />
-          <Redirect to={ForestComponent} />
+          <Route path="/colorfulrain" component={ColorfulRainComponent} />
+          {/* <Redirect to={ColorfulRainComponent} /> */}
         </Switch>
       </div>
     </BrowserRouter>
