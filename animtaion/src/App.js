@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import forestImg from "./image/forest.png";
 import cloud1Img from "./image/cloud1.png";
 import cloud2Img from "./image/cloud2.png";
@@ -18,7 +18,8 @@ import { KeyboardComponent } from "./components/keyboard/KeyboardComponent";
 import ForestComponent from "./components/Forest/ForestComponent";
 import ColorfulRainComponent from "./components/ColorfulRain/ColorfulRainComponent";
 import CigaretteComponent from "./components/Cigaratte/CigaretteComponent";
-
+import PlanetComponent from "./components/Planet/PlanetComponent";
+import styled from "./App.module.scss";
 function App() {
   const animations = [
     "forest",
@@ -26,19 +27,24 @@ function App() {
     "loading",
     "keyboard",
     "cigarette",
+    "planet",
   ];
   return (
     <BrowserRouter>
-      <div className="App">
-        Example
-        {/* <li className="list">
+      <div className={styled.App}>
+        <li className={styled.list}>
           <Link to="/">Home </Link>
-        </li> */}
+        </li>
         {animations.map((elem, index) => {
           return (
-            <li className="list">
-              <Link to={"/" + elem}> {elem}</Link>
-            </li>
+            <button className={styled.btn}>
+              <Link
+                style={{ textDecoration: "none", color: "black" }}
+                to={"/" + elem}
+              >
+                {elem}
+              </Link>
+            </button>
           );
         })}
         <Switch>
@@ -48,6 +54,8 @@ function App() {
           <Route path="/loading" component={LoadingComponent} />
           <Route path="/keyboard" component={KeyboardComponent} />
           <Route path="/cigarette" component={CigaretteComponent} />
+          <Route path="/planet" component={PlanetComponent} />
+
           <Redirect to={ColorfulRainComponent} />
         </Switch>
       </div>

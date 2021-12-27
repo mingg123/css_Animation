@@ -1,0 +1,30 @@
+.App {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.list {
+  list-style: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 1.6em;
+  border-radius: 3px;
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 250ms ease;
+  border: 2px solid #fff;
+  color: #fff;
+  margin-right: 10px;
+}
+.btn:hover {
+  background-color: #999;
+  color: #fff;
+}
