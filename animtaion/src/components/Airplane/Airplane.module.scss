@@ -1,0 +1,146 @@
+.main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wraper {
+  overflow: hidden;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #034071;
+}
+
+.runway {
+  position: relative;
+  width: 400px;
+  height: 100vh;
+  background: #1378bc;
+  border-left: 20px solid rgba(0, 0, 0, 0.25);
+  border-right: 20px solid rgba(0, 0, 0, 0.25);
+  transition: transform 1s;
+  transform-origin: top;
+  transition-delay: 1s;
+}
+
+.runway::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    transparent 0%,
+    transparent 50%,
+    #fff 50%,
+    #fff 100%
+  );
+  background-size: 20px 320px;
+  animation: animateRunway 0.5s linear infinite;
+}
+
+// on click event mouse left
+.section:active .runway::before {
+  animation: animateRunway 0.25s linear infinite;
+}
+
+// plane fly on click left event
+.section:active .runway {
+  transform: scaleX(0.7) scaleY(0);
+  transition-delay: 0s;
+  transform-origin: bottom;
+}
+
+@keyframes animateRunway {
+  0% {
+    background-position-y: 0px;
+  }
+  100% {
+    background-position-y: 320px;
+  }
+}
+
+.plane {
+  position: absolute;
+  bottom: 100px;
+  max-width: 250px;
+  pointer-events: none;
+  filter: drop-shadow(10px 10px 0 rgba(0, 0, 0, 0.5));
+  transition: 5s;
+}
+
+//mouse left on click event
+.section:active .plane {
+  max-width: 500px;
+  filter: drop-shadow(200px 200px 0 rgba(0, 0, 0, 0));
+}
+
+.clouds {
+  position: absolute;
+  z-index: 10000;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 2s;
+  transition-delay: 0s;
+}
+
+.section:active .clouds {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.clouds img {
+  position: absolute;
+  left: 0;
+  width: 1200px;
+  animation: animateClouds 5s linear infinite;
+  animation-delay: calc(-1.5% * var (--i));
+}
+
+@keyframes animateClouds {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.description {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: xx-large;
+}
+.cloud2 {
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.cloud2 img {
+  position: absolute;
+  right: 0;
+  width: 1200px;
+  animation: animateCloud2 5s linear infinite;
+  animation-delay: calc(-1.5% * var (--i));
+}
+
+@keyframes animateCloud2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}

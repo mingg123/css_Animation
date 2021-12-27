@@ -20,6 +20,7 @@ import ColorfulRainComponent from "./components/ColorfulRain/ColorfulRainCompone
 import CigaretteComponent from "./components/Cigaratte/CigaretteComponent";
 import PlanetComponent from "./components/Planet/PlanetComponent";
 import styled from "./App.module.scss";
+import AirplaneComponent from "./components/Airplane/AirplaneComponent";
 function App() {
   const animations = [
     "forest",
@@ -28,6 +29,7 @@ function App() {
     "keyboard",
     "cigarette",
     "planet",
+    "airplane",
   ];
   return (
     <BrowserRouter>
@@ -55,7 +57,7 @@ function App() {
           <Route path="/keyboard" component={KeyboardComponent} />
           <Route path="/cigarette" component={CigaretteComponent} />
           <Route path="/planet" component={PlanetComponent} />
-
+          <Route path="/airplane" component={AirplaneComponent} />
           <Redirect to={ColorfulRainComponent} />
         </Switch>
       </div>
