@@ -17,32 +17,25 @@ import LoadingComponent from "./components/Loading/LoadingComponent";
 import { KeyboardComponent } from "./components/keyboard/KeyboardComponent";
 import ForestComponent from "./components/Forest/ForestComponent";
 import ColorfulRainComponent from "./components/ColorfulRain/ColorfulRainComponent";
+import CigaretteComponent from "./components/Cigaratte/CigaretteComponent";
 
 function App() {
   const animations = ["forest", "colorfulrain", "loading", "keyboard"];
   return (
     <BrowserRouter>
       <div className="App">
-        Example
-        <li className="list">
+        {/* Example */}
+        {/* <li className="list">
           <Link to="/">Home </Link>
-        </li>
-        {animations.map((elem, index) => {
+        </li> */}
+        <CigaretteComponent />
+        {/* {animations.map((elem, index) => {
           return (
             <li className="list">
               <Link to={"/" + elem}> {elem}</Link>
             </li>
           );
         })}
-        {/* <li className="list">
-          <Link to="/forest">Forest </Link>
-        </li>
-        <li className="list">
-          <Link to="/colorfulrain">ColorFul Rain </Link>
-        </li>
-        <li className="list">
-          <Link to="/loading">loading</Link>
-        </li> */}
         <Switch>
           <Route exact path="/" component={ForestComponent} />
           <Route path="/forest" component={ForestComponent} />
@@ -50,7 +43,7 @@ function App() {
           <Route path="/loading" component={LoadingComponent} />
           <Route path="/keyboard" component={KeyboardComponent} />
           <Redirect to={ColorfulRainComponent} />
-        </Switch>
+        </Switch> */}
       </div>
     </BrowserRouter>
   );
