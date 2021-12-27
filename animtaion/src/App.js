@@ -20,16 +20,21 @@ import ColorfulRainComponent from "./components/ColorfulRain/ColorfulRainCompone
 import CigaretteComponent from "./components/Cigaratte/CigaretteComponent";
 
 function App() {
-  const animations = ["forest", "colorfulrain", "loading", "keyboard"];
+  const animations = [
+    "forest",
+    "colorfulrain",
+    "loading",
+    "keyboard",
+    "cigarette",
+  ];
   return (
     <BrowserRouter>
       <div className="App">
-        {/* Example */}
+        Example
         {/* <li className="list">
           <Link to="/">Home </Link>
         </li> */}
-        <CigaretteComponent />
-        {/* {animations.map((elem, index) => {
+        {animations.map((elem, index) => {
           return (
             <li className="list">
               <Link to={"/" + elem}> {elem}</Link>
@@ -42,8 +47,9 @@ function App() {
           <Route path="/colorfulrain" component={ColorfulRainComponent} />
           <Route path="/loading" component={LoadingComponent} />
           <Route path="/keyboard" component={KeyboardComponent} />
+          <Route path="/cigarette" component={CigaretteComponent} />
           <Redirect to={ColorfulRainComponent} />
-        </Switch> */}
+        </Switch>
       </div>
     </BrowserRouter>
   );
