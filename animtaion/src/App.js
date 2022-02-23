@@ -1,9 +1,9 @@
 // import "./App.css";
-import forestImg from "./image/forest.png";
-import cloud1Img from "./image/cloud1.png";
-import cloud2Img from "./image/cloud2.png";
-import cloud3Img from "./image/cloud3.png";
-import { useEffect } from "react";
+import forestImg from './image/forest.png';
+import cloud1Img from './image/cloud1.png';
+import cloud2Img from './image/cloud2.png';
+import cloud3Img from './image/cloud3.png';
+import { useEffect } from 'react';
 
 import {
   BrowserRouter,
@@ -11,25 +11,27 @@ import {
   Routes,
   Switch,
   Redirect,
-} from "react-router-dom";
-import { Link } from "react-router-dom";
-import LoadingComponent from "./components/Loading/LoadingComponent";
-import { KeyboardComponent } from "./components/keyboard/KeyboardComponent";
-import ForestComponent from "./components/Forest/ForestComponent";
-import ColorfulRainComponent from "./components/ColorfulRain/ColorfulRainComponent";
-import CigaretteComponent from "./components/Cigaratte/CigaretteComponent";
-import PlanetComponent from "./components/Planet/PlanetComponent";
-import styled from "./App.module.scss";
-import AirplaneComponent from "./components/Airplane/AirplaneComponent";
+} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import LoadingComponent from './components/Loading/LoadingComponent';
+import { KeyboardComponent } from './components/keyboard/KeyboardComponent';
+import ForestComponent from './components/Forest/ForestComponent';
+import ColorfulRainComponent from './components/ColorfulRain/ColorfulRainComponent';
+import CigaretteComponent from './components/Cigaratte/CigaretteComponent';
+import PlanetComponent from './components/Planet/PlanetComponent';
+import styled from './App.module.scss';
+import AirplaneComponent from './components/Airplane/AirplaneComponent';
+import BlubComponent from './components/Blub/BlubComponent';
 function App() {
   const animations = [
-    "forest",
-    "colorfulrain",
-    "loading",
-    "keyboard",
-    "cigarette",
-    "planet",
-    "airplane",
+    'forest',
+    'colorfulrain',
+    'loading',
+    'keyboard',
+    'cigarette',
+    'planet',
+    'airplane',
+    'blub',
   ];
   return (
     <BrowserRouter>
@@ -41,8 +43,8 @@ function App() {
           return (
             <button className={styled.btn}>
               <Link
-                style={{ textDecoration: "none", color: "black" }}
-                to={"/" + elem}
+                style={{ textDecoration: 'none', color: 'black' }}
+                to={'/' + elem}
               >
                 {elem}
               </Link>
@@ -58,6 +60,7 @@ function App() {
           <Route path="/cigarette" component={CigaretteComponent} />
           <Route path="/planet" component={PlanetComponent} />
           <Route path="/airplane" component={AirplaneComponent} />
+          <Route path="/blub" component={BlubComponent} />
           <Redirect to={ColorfulRainComponent} />
         </Switch>
       </div>
