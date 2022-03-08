@@ -2,6 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   cssModules: true,
+  images: {
+    loader: 'akamai',
+    path: '/',
+  },
 };
 
 const withSass = require('@zeit/next-sass');
