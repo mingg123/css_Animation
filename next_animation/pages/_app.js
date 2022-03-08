@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import '../styles/globals.css';
+import MyButton from '../widget/MyButton';
 
 function MyApp({ Component, pageProps }) {
   const animations = [
@@ -14,18 +15,22 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {animations.map((elem, index) => {
-        return (
-          <button key={index}>
-            <Link href={'/' + elem}>{elem}</Link>
-          </button>
-        );
-      })}
+      <div className="buttonWrapper">
+        {animations.map((elem, index) => {
+          return (
+            <MyButton key={index}>
+              <Link href={'/' + elem}>{elem}</Link>
+            </MyButton>
+          );
+        })}
+      </div>
       <style jsx>
         {`
-          button {
-            height: 25px;
-            margin-right: 3px;
+          .buttonWrapper {
+            display: flex;
+            justify-content: center;
+            gap: 70px;
+            padding-top: 30px;
           }
         `}
       </style>
