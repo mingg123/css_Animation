@@ -21,7 +21,12 @@ Planet
 [click here!](https://css-animation-e8889.web.app/)
 
 
+# Env
 
+```
+React, Next.js, SCSS
+
+```
 
 
 # Reference
