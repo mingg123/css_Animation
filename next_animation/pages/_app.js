@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }) {
     'planet',
     'airplane',
     'blub',
+    'pixelrain',
   ];
 
   return (
